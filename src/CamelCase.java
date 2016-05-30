@@ -17,4 +17,8 @@ public class CamelCase {
         }
         return palavras;
     }
+
+    public static String acharProximaPalavra(List<String> palavras, String s) {
+        return "";
+    }
 }

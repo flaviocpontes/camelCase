@@ -37,5 +37,14 @@ public class TestCamelCase {
         assertTrue(esperado.equals(palavras));
     }
 
+    @Test
+    public void testEncontraPalavraVazia() {
+        List<String> palavras = new ArrayList<>();
+        List<String> esperado = new ArrayList<>();
+        String restante = CamelCase.acharProximaPalavra(palavras, "");
+        assertTrue(restante.equals(""));
+        assertTrue(esperado.equals(palavras));
+    }
+
 
 }
