@@ -125,6 +125,16 @@ public class TestCamelCase {
     }
 
     @Test
+    public void testEncontraNumeroApensado() {
+        List<String> palavras = new ArrayList<>();
+        List<String> esperado = new ArrayList<>();
+        esperado.add("recupera");
+        String restante = CamelCase.acharProximaPalavra(palavras, "recupera10Primeiros");
+        assertTrue(restante.equals("10Primeiros"));
+        assertTrue(esperado.equals(palavras));
+    }
+
+    @Test
     public void testAjustaCapitalizaçãoUmaPalavraLowercase() {
         String esperado = "nome";
         assertTrue(esperado.equals(CamelCase.ajustaCapitalizacao("nome")));
