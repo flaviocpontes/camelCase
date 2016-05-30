@@ -51,7 +51,7 @@ public class TestCamelCase {
         List<String> esperado = new ArrayList<>();
         esperado.add("numero");
         esperado.add("CPF");
-        esperado.add("Contribuinte");
+        esperado.add("contribuinte");
         assertTrue(esperado.equals(palavras));
     }
 

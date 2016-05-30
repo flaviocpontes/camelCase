@@ -11,13 +11,9 @@ public class CamelCase {
 
     public static String acharProximaPalavra(List<String> palavras, String s) {
         for (int i = 0; i < s.length(); i++) {
-            if (Character.isUpperCase(s.charAt(i)) && i > 0) {
-                if (i < s.length() - 2 && Character.isLowerCase(s.charAt(i+1))) {
+            if ((Character.isUpperCase(s.charAt(i)) && i > 0) && (((i < s.length() - 2) && Character.isLowerCase(s.charAt(i+1))) || (Character.isLowerCase(s.charAt(i-1))))){
                     palavras.add(ajustaCapitalizacao(s.substring(0, i)));
-                    return s.substring(i);
-                }
-            }
-        }
+                    return s.substring(i);}}
         if (s.length() > 0) palavras.add(ajustaCapitalizacao(s));
         return "";
     }
