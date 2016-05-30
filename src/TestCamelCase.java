@@ -20,4 +20,12 @@ public class TestCamelCase {
         assertTrue(esperado.equals(palavras));
     }
 
+    @Test
+    public void testStringNomeCapitalized() {
+        List<String> palavras = CamelCase.converterCamelCase("Nome");
+        List<String> esperado = new ArrayList<>();
+        esperado.add("nome");
+        assertTrue(esperado.equals(palavras));
+    }
+
 }
