@@ -28,4 +28,14 @@ public class TestCamelCase {
         assertTrue(esperado.equals(palavras));
     }
 
+    @Test
+    public void testStringNomeComposto() {
+        List<String> palavras = CamelCase.converterCamelCase("nomeComposto");
+        List<String> esperado = new ArrayList<>();
+        esperado.add("nome");
+        esperado.add("composto");
+        assertTrue(esperado.equals(palavras));
+    }
+
+
 }
