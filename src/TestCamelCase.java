@@ -46,6 +46,16 @@ public class TestCamelCase {
     }
 
     @Test
+    public void testConvertePalavrasComSiglaInclusa() {
+        List<String> palavras = CamelCase.converterCamelCase("numeroCPFContribuinte");
+        List<String> esperado = new ArrayList<>();
+        esperado.add("numero");
+        esperado.add("CPF");
+        esperado.add("Contribuinte");
+        assertTrue(esperado.equals(palavras));
+    }
+
+    @Test
     public void testEncontraPalavraVazia() {
         List<String> palavras = new ArrayList<>();
         List<String> esperado = new ArrayList<>();
