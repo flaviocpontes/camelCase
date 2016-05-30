@@ -93,4 +93,10 @@ public class TestCamelCase {
         assertTrue(restante.equals(""));
         assertTrue(esperado.equals(palavras));
     }
+
+    @Test
+    public void testAjustaCapitalizaçãoUmaPalavraLowercase() {
+        String esperado = "nome";
+        assertTrue(esperado.equals(CamelCase.ajustaCapitalizacao("nome")));
+    }
 }

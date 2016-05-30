@@ -24,4 +24,8 @@ public class CamelCase {
         }
         return "";
     }
+
+    public static String ajustaCapitalizacao(String s) {
+        return "";
+    }
 }
