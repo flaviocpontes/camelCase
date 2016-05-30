@@ -3,6 +3,8 @@ import java.util.List;
 
 public class CamelCase {
     public static List<String> converterCamelCase(String original) {
-        return new ArrayList<>();
+        List<String> palavras = new ArrayList<>();
+        if (original.length() > 0) palavras.add(original);
+        return palavras;
     }
 }
