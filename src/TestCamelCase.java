@@ -100,7 +100,7 @@ public class TestCamelCase {
         List<String> esperado = new ArrayList<>();
         esperado.add("CPF");
         String restante = CamelCase.acharProximaPalavra(palavras, "CPFContribuinte");
-        assertTrue(restante.equals(""));
+        assertTrue(restante.equals("Contribuinte"));
         assertTrue(esperado.equals(palavras));
     }
 
