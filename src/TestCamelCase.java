@@ -95,6 +95,16 @@ public class TestCamelCase {
     }
 
     @Test
+    public void testEncontraUmaSiglaComposta() {
+        List<String> palavras = new ArrayList<>();
+        List<String> esperado = new ArrayList<>();
+        esperado.add("CPF");
+        String restante = CamelCase.acharProximaPalavra(palavras, "CPFContribuinte");
+        assertTrue(restante.equals(""));
+        assertTrue(esperado.equals(palavras));
+    }
+
+    @Test
     public void testAjustaCapitalizaçãoUmaPalavraLowercase() {
         String esperado = "nome";
         assertTrue(esperado.equals(CamelCase.ajustaCapitalizacao("nome")));
