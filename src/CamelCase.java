@@ -19,7 +19,7 @@ public class CamelCase {
     }
 
     public static String acharProximaPalavra(List<String> palavras, String s) {
-        if (s.length() > 0) palavras.add(s);
+        if (s.length() > 0) palavras.add(s.toLowerCase());
         return "";
     }
 }
