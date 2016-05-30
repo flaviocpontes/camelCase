@@ -99,4 +99,10 @@ public class TestCamelCase {
         String esperado = "nome";
         assertTrue(esperado.equals(CamelCase.ajustaCapitalizacao("nome")));
     }
+
+    @Test
+    public void testAjustaCapitalizaçãoUmaPalavraCapitalized() {
+        String esperado = "nome";
+        assertTrue(esperado.equals(CamelCase.ajustaCapitalizacao("Nome")));
+    }
 }
