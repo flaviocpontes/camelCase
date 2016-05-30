@@ -60,8 +60,8 @@ public class TestCamelCase {
         List<String> palavras = CamelCase.converterCamelCase("recupera10Primeiros");
         List<String> esperado = new ArrayList<>();
         esperado.add("numero");
-        esperado.add("CPF");
-        esperado.add("contribuinte");
+        esperado.add("10");
+        esperado.add("primeiros");
         assertTrue(esperado.equals(palavras));
     }
 
