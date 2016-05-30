@@ -13,4 +13,13 @@ public class TestCamelCase {
         assertTrue(c.converterCamelCase("").isEmpty());
     }
 
+    @Test
+    public void testStringNomeLowerCase() {
+        CamelCase c = new CamelCase();
+        List<String> palavras = c.converterCamelCase("nome");
+        List<String> esperado = new ArrayList<>();
+        esperado.add("nome");
+        assertTrue(esperado.equals(palavras));
+    }
+
 }
