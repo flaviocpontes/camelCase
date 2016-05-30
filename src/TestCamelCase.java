@@ -7,13 +7,13 @@ import java.util.List;
 public class TestCamelCase {
 
     @Test
-    public void testStringVazia() {
+    public void testConverteStringVazia() {
         List<String> palavras = CamelCase.converterCamelCase("");
         assertTrue(CamelCase.converterCamelCase("").isEmpty());
     }
 
     @Test
-    public void testStringUmaPalavraLowercase() {
+    public void testConverteUmaPalavraLowercase() {
         List<String> palavras = CamelCase.converterCamelCase("nome");
         List<String> esperado = new ArrayList<>();
         esperado.add("nome");
@@ -21,7 +21,7 @@ public class TestCamelCase {
     }
 
     @Test
-    public void testStringUmaPalavraCapitalized() {
+    public void testConverteUmaPalavraCapitalized() {
         List<String> palavras = CamelCase.converterCamelCase("Nome");
         List<String> esperado = new ArrayList<>();
         esperado.add("nome");
@@ -29,7 +29,7 @@ public class TestCamelCase {
     }
 
     @Test
-    public void testStringDuasPalavras() {
+    public void testConverteDuasPalavras() {
         List<String> palavras = CamelCase.converterCamelCase("nomeComposto");
         List<String> esperado = new ArrayList<>();
         esperado.add("nome");
