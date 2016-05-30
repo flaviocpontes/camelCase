@@ -26,6 +26,6 @@ public class CamelCase {
     }
 
     public static String ajustaCapitalizacao(String s) {
-        return "";
+        return s;
     }
 }
