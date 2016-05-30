@@ -38,6 +38,14 @@ public class TestCamelCase {
     }
 
     @Test
+    public void testConverteUmaSigla() {
+        List<String> palavras = CamelCase.converterCamelCase("CPF");
+        List<String> esperado = new ArrayList<>();
+        esperado.add("CPF");
+        assertTrue(esperado.equals(palavras));
+    }
+
+    @Test
     public void testEncontraPalavraVazia() {
         List<String> palavras = new ArrayList<>();
         List<String> esperado = new ArrayList<>();
