@@ -26,6 +26,10 @@ public class CamelCase {
     }
 
     public static String ajustaCapitalizacao(String s) {
-        return s.toLowerCase();
+        if (Character.isUpperCase(s.charAt(0))){
+            if (s.length() > 1 && (Character.isUpperCase(s.charAt(1)))) return s;
+            else return s.toLowerCase();
+        }
+        return s;
     }
 }
