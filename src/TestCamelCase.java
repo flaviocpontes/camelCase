@@ -171,4 +171,9 @@ public class TestCamelCase {
         assertTrue(esperado.equals(CamelCase.ajustaCapitalizacao("CPF")));
     }
 
+    @Test
+    public void testInicioPalavra() {
+        assertTrue(CamelCase.inicioPalavra("nomeComposto", 4));
+    }
+
 }

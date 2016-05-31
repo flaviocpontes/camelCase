@@ -6,8 +6,7 @@ public class CamelCase {
         if ((original.length() > 0) && (Character.isDigit(original.charAt(0)))) throw new IllegalArgumentException("CamelCase não pode começar com dígitos!");
         List<String> palavras = new ArrayList<>();
         String restante = original;
-        do {
-            restante = acharProximaPalavra(palavras, restante);
+        do {restante = acharProximaPalavra(palavras, restante);
         } while (restante.length() > 0);
         return palavras;
     }
@@ -33,5 +32,9 @@ public class CamelCase {
             else return s.toLowerCase();
         }
         return s;
+    }
+
+    public static boolean inicioPalavra(String s, int i) {
+        return false;
     }
 }
