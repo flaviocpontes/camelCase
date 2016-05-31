@@ -172,8 +172,14 @@ public class TestCamelCase {
     }
 
     @Test
-    public void testInicioPalavra() {
+    public void testInicioPalavraDuasPalavras() {
         assertTrue(CamelCase.inicioPalavra("nomeComposto", 4));
+    }
+
+    @Test
+    public void testInicioPalavraSiglaInicio() {
+        assertFalse(CamelCase.inicioPalavra("CPFContribuinte", 1));
+        assertTrue(CamelCase.inicioPalavra("CPFContribuinte", 3));
     }
 
 }
