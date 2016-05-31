@@ -35,6 +35,7 @@ public class CamelCase {
     }
 
     public static boolean inicioPalavra(String s, int i) {
+        if (Character.isUpperCase(s.charAt(i)) && i > 0) return true;
         return false;
     }
 }
