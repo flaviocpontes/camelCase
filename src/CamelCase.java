@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CamelCase {
-    public static List<String> converterCamelCase(String original) {
+    public static List<String> converterCamelCase(String original) throws IllegalArgumentException{
+        if ((original.length() > 0) && (Character.isDigit(original.charAt(0)))) throw new IllegalArgumentException("CamelCase não pode começar com dígitos!");
         List<String> palavras = new ArrayList<>();
         String restante = original;
         do {
@@ -13,7 +14,7 @@ public class CamelCase {
 
     public static String acharProximaPalavra(List<String> palavras, String s) {
         for (int i = 0; i < s.length(); i++) {
-            if ((Character.isUpperCase(s.charAt(i))  && i > 0) && (((i < s.length() - 2) && Character.isLowerCase(s.charAt(i + 1))) || (Character.isLowerCase(s.charAt(i - 1))))){
+            if ((Character.isUpperCase(s.charAt(i)) && i > 0) && (((i < s.length() - 2) && Character.isLowerCase(s.charAt(i + 1))) || (Character.isLowerCase(s.charAt(i - 1))))){
                 palavras.add(ajustaCapitalizacao(s.substring(0, i)));
                 return s.substring(i);
             } else if ((Character.isDigit(s.charAt(i)) && i > 0) && !(Character.isDigit(s.charAt(i-1)))) {

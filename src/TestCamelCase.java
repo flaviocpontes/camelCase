@@ -66,7 +66,7 @@ public class TestCamelCase {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testEncontrarPalavraComecaNumero() {
+    public void testConverterPalavraComecaNumero() {
         List<String> palavras = CamelCase.converterCamelCase("10Primeiros");
     }
 
