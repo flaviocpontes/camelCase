@@ -59,7 +59,7 @@ public class TestCamelCase {
     public void testConvertePalavrasComNumeroIncluso() {
         List<String> palavras = CamelCase.converterCamelCase("recupera10Primeiros");
         List<String> esperado = new ArrayList<>();
-        esperado.add("numero");
+        esperado.add("recupera");
         esperado.add("10");
         esperado.add("primeiros");
         assertTrue(esperado.equals(palavras));

@@ -20,7 +20,7 @@ public class CamelCase {
                 palavras.add(ajustaCapitalizacao(s.substring(0, i)));
                 return s.substring(i);
             }
-            }
+        }
         if (s.length() > 0) palavras.add(ajustaCapitalizacao(s));
         return "";
     }
