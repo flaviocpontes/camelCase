@@ -65,6 +65,11 @@ public class TestCamelCase {
         assertTrue(esperado.equals(palavras));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testEncontrarPalavraComecaNumero() {
+        List<String> palavras = CamelCase.converterCamelCase("10Primeiros");
+    }
+
     @Test
     public void testEncontraPalavraVazia() {
         List<String> palavras = new ArrayList<>();
