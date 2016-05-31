@@ -38,9 +38,27 @@ public class TestCamelCase {
     }
 
     @Test
+    public void testConverteDuasPalavrasCapitalized() {
+        List<String> palavras = CamelCase.converterCamelCase("NomeComposto");
+        List<String> esperado = new ArrayList<>();
+        esperado.add("nome");
+        esperado.add("composto");
+        assertTrue(esperado.equals(palavras));
+    }
+
+    @Test
     public void testConverteUmaSigla() {
         List<String> palavras = CamelCase.converterCamelCase("CPF");
         List<String> esperado = new ArrayList<>();
+        esperado.add("CPF");
+        assertTrue(esperado.equals(palavras));
+    }
+
+    @Test
+    public void testConvertePalavraComSiglaApensada() {
+        List<String> palavras = CamelCase.converterCamelCase("numeroCPF");
+        List<String> esperado = new ArrayList<>();
+        esperado.add("numero");
         esperado.add("CPF");
         assertTrue(esperado.equals(palavras));
     }
@@ -68,6 +86,11 @@ public class TestCamelCase {
     @Test(expected = IllegalArgumentException.class)
     public void testConverterPalavraComecaNumero() {
         List<String> palavras = CamelCase.converterCamelCase("10Primeiros");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testConverterPalavraCaracterInvalido() {
+        List<String> palavras = CamelCase.converterCamelCase("nome#Composto");
     }
 
     @Test
