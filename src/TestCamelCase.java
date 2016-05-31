@@ -148,6 +148,11 @@ public class TestCamelCase {
         assertTrue(esperado.equals(palavras));
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testEncontrarPalavraCaracterIlegal() {
+        List<String> palavras = CamelCase.converterCamelCase("nome#Composto");
+    }
+
     @Test
     public void testAjustaCapitalizaçãoUmaPalavraLowercase() {
         String esperado = "nome";
