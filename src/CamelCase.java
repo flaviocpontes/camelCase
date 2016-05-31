@@ -12,8 +12,9 @@ public class CamelCase {
         return palavras;
     }
 
-    public static String acharProximaPalavra(List<String> palavras, String s) {
+    public static String acharProximaPalavra(List<String> palavras, String s) throws IllegalArgumentException{
         for (int i = 0; i < s.length(); i++) {
+            if ((s.length() > 0) && (!Character.isLetterOrDigit(s.charAt(i)))) throw new IllegalArgumentException("CamelCase só suporta letras e dígitos!");
             if ((Character.isUpperCase(s.charAt(i)) && i > 0) && (((i < s.length() - 2) && Character.isLowerCase(s.charAt(i + 1))) || (Character.isLowerCase(s.charAt(i - 1))))){
                 palavras.add(ajustaCapitalizacao(s.substring(0, i)));
                 return s.substring(i);
