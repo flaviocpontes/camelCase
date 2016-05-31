@@ -172,6 +172,14 @@ public class TestCamelCase {
     }
 
     @Test
+    public void testInicioPalavraUmaPalavra() {
+        assertFalse(CamelCase.inicioPalavra("nome", 0));
+        assertFalse(CamelCase.inicioPalavra("nome", 1));
+        assertFalse(CamelCase.inicioPalavra("nome", 2));
+        assertFalse(CamelCase.inicioPalavra("nome", 3));
+    }
+
+    @Test
     public void testInicioPalavraDuasPalavras() {
         assertFalse(CamelCase.inicioPalavra("nomeComposto", 2));
         assertFalse(CamelCase.inicioPalavra("nomeComposto", 8));
