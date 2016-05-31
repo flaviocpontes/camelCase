@@ -195,6 +195,17 @@ public class TestCamelCase {
     }
 
     @Test
+    public void testInicioPalavraSiglaIntercalada() {
+        assertFalse(CamelCase.inicioPalavra("numeroCPFContribuinte", 0));
+        assertFalse(CamelCase.inicioPalavra("numeroCPFContribuinte", 5));
+        assertTrue(CamelCase.inicioPalavra("numeroCPFContribuinte", 6));
+        assertFalse(CamelCase.inicioPalavra("numeroCPFContribuinte", 8));
+        assertTrue(CamelCase.inicioPalavra("numeroCPFContribuinte", 9));
+        assertFalse(CamelCase.inicioPalavra("numeroCPFContribuinte", 10));
+        assertFalse(CamelCase.inicioPalavra("numeroCPFContribuinte", 20));
+    }
+
+    @Test
     public void testInicioPalavraNumeroIntercalado() {
         assertFalse(CamelCase.inicioPalavra("recupera10Primeiros", 1));
         assertTrue(CamelCase.inicioPalavra("recupera10Primeiros", 8));
